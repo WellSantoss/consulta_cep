@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 0 30px;
 }
 
 img {
@@ -27,7 +28,6 @@ h1 {
 }
 
 form {
-  flex: 1;
   max-width: 500px;
   margin-left: 100px;
 }
@@ -87,6 +87,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .search button {
   background-color: #FE5454;
+  transition: background .3s;
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1rem;
@@ -95,6 +96,11 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0 8px 8px 0;
   border: none;
   cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #e73f3f;
+  transition: background .3s;
 }
 
 .flex {
@@ -109,4 +115,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .flex div:last-child {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .img {
+    display: none;
+  }
+
+  form {
+    margin-left: 0;
+  }
 }

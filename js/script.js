@@ -2,11 +2,18 @@ const btnConsultar = document.querySelector('.search button');
 const inputCEP = document.querySelector('#cep');
 inputCEP.focus();
 
-btnConsultar.addEventListener('click', valida);
-
-function valida(event) {
+btnConsultar.addEventListener('click', (event) => {
   event.preventDefault();
+  valida();
+});
 
+inputCEP.addEventListener('keyup', (e) => {
+  if (e.keyCode == '13') {
+    valida();
+  }
+});
+
+function valida() {
   const msg = document.querySelector('form .msg');
   if (inputCEP.value != '' && inputCEP.value.length == 8) {
     consulta(inputCEP.value);
