@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta CEP</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div>
+    <img src="./img/img.svg" alt="">
+  </div>
+
+  <form action="#">
+    <h1>Consulta CEP</h1>
+
+    <p class="msg"></p>
+    <label for="cep" class="sr">CEP</label>
+    <div class="search">
+      <input type="number" name="cep" id="cep" placeholder="Digite o CEP">
+      <button>Consultar</button>
+    </div>
+
+    
+    <div class="response">
+      <label for="rua">Rua</label>
+      <input type="text" name="rua" id="rua" disabled>
+      <label for="bairro">Bairro</label>
+      <input type="text" name="bairro" id="bairro" disabled>
+      <label for="cidade">Cidade</label>
+      <input type="text" name="cidade" id="cidade" disabled>
+      <div class="flex">
+        <div>
+          <label for="estado">Estado</label>
+          <input type="text" name="estado" id="estado" disabled>
+        </div>
+
+        <div>
+          <label for="ddd">DDD</label>
+          <input type="text" name="ddd" id="ddd" disabled>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
